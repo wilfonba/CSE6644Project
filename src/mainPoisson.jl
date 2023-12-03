@@ -6,7 +6,7 @@ include("GMRES.jl")
 include("SMW.jl")
 include("Matrices.jl")
 
-m = 10
+m = 100
 A = spzeros(m*m,m*m)
 M = zeros(1,3)
 N = spzeros(m*m,m*m)
