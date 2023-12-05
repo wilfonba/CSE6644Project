@@ -1,0 +1,19 @@
+        - function SMW(M, N, b, x, tol, maxIter)
+        - 
+        -     error = 1.0
+        -     nIters = 0
+        - 
+        0     cc = fft(M)
+        - 
+755045680     @time begin
+        -         while error > tol && nIters <maxIter
+        -             nIters += 1
+        -             c = N*x + b
+        -             xNew = real(fft(ifft(c)./cc))
+        -             error = norm(xNew - x)
+        -             x .= copy(xNew)
+        -         end
+        -     end
+        0     return x, nIters
+        - 
+        - end
