@@ -1,3 +1,5 @@
+.DS_Store
+experiments/
 __pycache__/
 matrices/
 *.png
